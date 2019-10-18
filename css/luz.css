@@ -1,0 +1,51 @@
+
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.main-nav li
+{
+  display: inline-block;
+}
+.main-nav li a
+{
+   color: rgb(245, 239, 239);
+   text-decoration: none;
+   padding: 5px 20px;
+   font-family: "Roboto",sans-serif;
+   font-size: 15px;
+   position: relative; 
+   
+}
+
+.main-nav li.active a
+{
+ border: 1px solid white;
+}
+.main-nav li a:hover
+{
+ border: 1px solid white;
+}
+
+
+ #cabecera { 
+   margin: 20px;
+  }
+  #agrupar { 
+  font-family: Times New Roman; 
+  font-size: 20px;
+  }
+  #seccion{
+   border: ;
+   margin: 20px;
+  font-family: ;
+  font-size: 18px;
+  }
+  #h1{
+  font-size: 25px;
+  }
+  #h2{
+  font-size: 20px;
+  }

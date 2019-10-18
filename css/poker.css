@@ -1,0 +1,138 @@
+*
+{
+    margin: 0;
+    padding: 0; 
+}
+
+header 
+{
+    
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+}
+header
+{
+    color:black;
+}
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+}
+.main-nav li
+{
+  display: inline-block;
+}
+.main-nav li a
+{
+   color: black;
+   text-decoration: none;
+   padding: 5px 20px;
+   font-family: "Roboto",sans-serif;
+   font-size: 15px;
+   position: relative; 
+   
+}
+
+.main-nav li.active a
+{
+ border: 1px solid black;
+}
+.main-nav li a:hover
+{
+ border: 1px solid black;
+}
+
+
+
+body
+{
+    background:url(https://st2.depositphotos.com/5646918/8852/v/950/depositphotos_88527768-stock-illustration-orange-abstract-geometric-rumpled-triangular.jpg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family:'Times New Roman', sans-serif; 
+}
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .box
+{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background:rgba(213, 184, 255, 1); 
+    box-shadow: 0 5px 15px rgba(0, 0,0,.1); 
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+   
+
+}
+.container .box .icon
+{
+    position: relative;
+    width: 80px; 
+    height: 80px;
+    color: #fff; 
+    background: #000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%; 
+    font-size: 40px; 
+    font-weight: 700; 
+    transition: 1s; 
+}
+.container .box:nth-child(1) .icon 
+{
+    box-shadow: 0 0 0 0 purple;
+    background: purple; 
+}
+.container .box:nth-child(1):hover .icon
+{
+    box-shadow: 0 0 0 400px purple;
+}
+.container .box:nth-child(2).icon 
+{
+    box-shadow: 0 0 0 0 purple;
+    background: purple; 
+}
+.container .box:nth-child(2):hover .icon
+{
+    box-shadow: 0 0 0 400px purple;
+}
+.container .box:nth-child(3) .icon 
+{
+    box-shadow: 0 0 0 0 purple;
+    background: purple; 
+}
+.container .box:nth-child(3):hover .icon
+{
+    box-shadow: 0 0 0 400px purple;
+}
+.table,th,td{
+	border: 1px white;
+	text-align: center;
+	border-collapse: collapse;
+    padding: .5em;
+    color: white; 
+    float: left;
+    
+}
+
+
+

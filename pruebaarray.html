@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+     <script src="js/fun.js"></script>
+    <title>Prueba</title>
+    <div class="row">      
+                    <ul class="main-nav">
+                     <li class="active"><a href="homoerectus.html">Volver a inicio</a></li>
+                
+                    </ul>
+                </div>
+            <div class="hero">
+
+</head>
+ <style type="text/css">
+header 
+{
+    
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+}
+header
+{
+    color:blue;
+}
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+}
+.main-nav li
+{
+  display: inline-block;
+}
+.main-nav li a
+{
+   color: rgb(245, 239, 239);
+   text-decoration: blue;
+   padding: 5px 20px;
+   font-family: "Roboto",sans-serif;
+   font-size: 15px;
+   position: relative; 
+   
+}
+
+.main-nav li.active a
+{
+ border: 1px solid blue;
+
+}
+.main-nav li a:hover
+{
+ border: 1px solid blue;
+}
+
+  form{
+  width: 300px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+body{
+  background: url(https://www.logaster.com.es/blog/wp-content/uploads/2019/01/4-min.jpg) ;
+   background-repeat: no-repeat, repeat;
+   background-size: 1600px;
+}
+input[type="submit"]{
+  margin-bottom: 0;
+  background: #1668c4;
+  color: #fff;
+  border: none;
+}
+input[type="submit"]{
+
+  background: #4A88F4;
+  cursor: pointer;
+  }
+
+input,textarea{
+  margin-bottom: 20px;
+  padding:10px %;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+</style>
+<script type="text/javascript">
+          
+          function variables(){
+            var base = ["Nombre ", "Horas laboradas  ", "Salario sin subsidio  ", "Salario con subsidio de transporte  "];
+            var nombres=[];
+            var horas=[];
+            var valor=[];
+            var preciocon=[];
+            var preciosin=[];
+            var input;
+            var n=0;
+            var p=1;
+
+      document.getElementById("demo").innerHTML=("-"+base); 
+
+      while (n<3){          
+            input=prompt("Nombre de Empleado "+p+":");
+            nombres[n]=input;            
+            input=prompt("Horas trabajadas por "+nombres[n]+":");
+            horas[n]=parseInt(input, 10);
+            input=prompt("Valor salario por dia (Recuerda que el salario minimo se encuentra a $27.604 de "+nombres[n]+":");
+            valor[n]=parseInt(input, 10);
+        preciocon[n]=parseInt((horas[n]*valor[n])+97032);
+        preciosin[n]=parseFloat(horas[n]*valor[n]);
+        n++;
+        p++;
+        }
+        document.getElementById("empleado1").innerHTML=("-"+"\t\t"+nombres[0]+"\t\t"+horas[0]+"\t\t"+valor[0]+"\t\t"+preciocon[0]+"\t\t"+preciosin[0]);
+        document.getElementById("empleado2").innerHTML=("-"+"\t\t"+nombres[1]+"\t\t"+horas[1]+"\t\t"+valor[1]+"\t\t"+preciocon[1]+"\t\t"+preciosin[1]);
+        document.getElementById("empleado3").innerHTML=("-"+"\t\t"+nombres[2]+"\t\t"+horas[2]+"\t\t"+valor[2]+"\t\t"+"$"preciocon[2]+"\t\t"+"$"+preciosin[2]);
+
+      }
+</script>
+<script type="text/javascript">      
+          function mostrarMensaje1(){
+          var nombres=[];
+          var input;
+          input=prompt("Escribe un nombre");
+          nombres[0]=input;
+          input=prompt("Escribe otro nombre");
+          nombres[1]=input;
+          input=prompt("Escribe un último nombre");
+          nombres[2]=input;
+
+          alert("Los nombres introducidos por usted fueron:"+"\n\n"+ nombres[0]+", "+nombres[1]+", y "+nombres[2]+".");
+      }
+                                                          </script>
+  </head>
+
+    <body>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
+ <form action="">
+    <h3>Sistema de prueba</h3>
+
+  <br>
+
+     <p>Esta prueba esta habilitada para ser usada solo con tres empleados, si desea realizar una mayor prueba por favor comuniquese por el formulario de contacto</p>
+      <p onclick="variables()" style="color: #D2691E;">
+      para iniciar de click aqui.
+      </p>
+        
+</form>
+<p id="demo" style="text-align: center;"></p>
+        <p id="empleado1" style="text-align: center;"></p>
+        <p id="empleado2" style="text-align: center;"></p>
+        <p id="empleado3" style="text-align: center;"></p>
+  </body>
+</html>

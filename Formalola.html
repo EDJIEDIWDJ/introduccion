@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Este es un formulario">
+	<meta name="keywords" content="Formulario">
+	<title>Formulario</title>
+	<div class="row">
+                    <ul class="main-nav">
+                     <li class="active"><a href="homoerectus.html">Home</a></li>
+                     <li><a href="comofunciona.html">¿ Como Funciona ?</a></li>
+                     <li><a href="prueba2.html">Costos</a></li>
+                     <li><a href="Proyecto.html">Clientes </a></li>
+                     <li><a href="Formalola.html">Formulario</a></li>
+                     <li><a href="index.html">Competencias</a></li>
+                     <li><a href="a.html">Prueba gratis</a></li>
+                
+                    </ul>
+                </div>
+            <div class="hero">
+	<style>
+		*{
+margin:0;padding:0;
+}
+header 
+{
+    
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+}
+header
+{
+    color:black;
+}
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.main-nav li
+{
+  display: inline-block;
+}
+.main-nav li a
+{
+   color: rgb(245, 239, 239);
+   text-decoration: none;
+   padding: 5px 20px;
+   font-family: "Roboto",sans-serif;
+   font-size: 15px;
+   position: relative; 
+   
+}
+
+.main-nav li.active a
+{
+ border: 1px solid white;
+}
+.main-nav li a:hover
+{
+ border: 1px solid white;
+}
+
+body{
+background:url(https://st4.depositphotos.com/1034582/21812/v/1600/depositphotos_218123488-stock-illustration-abstract-low-poly-design-background.jpg);
+}
+h1{
+	font-size: 1.5em;
+	text-align: center;
+	color:#310430;
+}
+#contenedor{
+background:transparent;
+margin:0 auto;
+width:96%;
+}
+#contenedor form fieldset{
+border: 2px solid blue;
+padding:5px;
+font-size:20px;
+}
+#contenedor form{
+padding:10px;
+margin:10px 30px;
+border:thin solid #E9E9E9;
+border-radius:20px;
+-webkit-border-radius:20px;
+-moz-border-radius:20px;
+-o-border-radius:20px;
+-ms-border-radius:20px;
+}
+#contenedor form label{
+	color:blue;
+	font-size:18px;
+}
+#contenedor form label:hover{
+	color:#171717;
+	cursor:pointer;
+}
+#contenedor form input[type="text"]{
+	width:400px;
+	height:35px;
+	padding-left:5px;
+	font-family:Helvetica;
+	font-size:16px;
+}
+#contenedor form textarea{
+	resize:none;
+	padding:5px;
+}
+#contenedor form input[type="text"], textarea{
+background: cyan;
+}
+
+#contenedor form input[type="text"]:focus, #contenedor form textarea:focus{
+background: cyan;
+outline-color: #008A45;
+}
+#contenedor form input[type="text"]:active, #contenedor form textarea:active{
+background: cyan;
+outline-color: #008A45;
+}
+#contenedor form .canbio{
+transition:all 1s ease-in-out;
+-webkit-transition:all 1s ease-in-out;
+-moz-transition:all 1s ease-in-out;
+-ms-transition:all 1s ease-in-out;
+-o-transition:all 1s ease-in-out;
+}
+#contenedor form button{
+background:cyan;
+border-radius:5px;
+color:white;
+padding:10px 20px;
+border:2px solid white;
+}
+#contenedor form button:hover
+{
+	color:black;
+	cursor:pointer;
+}
+footer{
+	background: #272727;
+	text-align: center;
+	padding: 20px 2%;
+}
+	</style>
+	<script>
+		function validarFormulario(){
+	var verificar=true;
+	var expRegNombres =/^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ]{1,}([\s][A-Za-zÁáÉéÍíÓóÚúÜüÑñ]{1,})+$/;
+	var expRegCorreo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+	var expRegTelefono=/^([0-9]\s*)*$/;	
+	var formulario = document.getElementById("formulario");
+	var nombres = document.getElementById("nombres");
+	var correo = document.getElementById("correo");
+	var telefono = document.getElementById("telefono");
+	var comentario = document.getElementById("comentario");	
+	if(!nombres.value){
+	alert("Escriba sus nombres por favor.");
+	nombres.focus();
+	verificar=false;
+	return false;
+	}
+	else if(nombres.value.split(" ").length < 2){
+	alert("Esciba sus nombres completos por favor.");
+	nombres.focus();
+	verificar=false;
+	return false;
+	}
+	else if(!expRegNombres.exec(nombres.value)){
+	alert("Este campo admite letras de la a-zA-Z, ÁáÉéÍíÓóÚúÜüÑñ y no admite espacios en blanco al final.");
+	nombres.focus();
+	verificar=false;
+	return false;
+	}
+	
+	else if(!correo.value){
+	alert("Escriba su correo por favor.");
+	correo.focus();
+	verificar=false;
+	return false;
+	}
+	else if(!expRegCorreo.exec(correo.value)){
+	alert("Escriba un correo valido por favor.");
+	correo.focus();
+	verificar=false;
+	return false;
+	}
+	
+	else if(!telefono.value){
+	alert("Escriba un numero de telfono por favor.");
+	telefono.focus();
+	verificar=false;
+	return false;
+	}
+	else if(!expRegTelefono.exec(telefono.value)){
+	alert("el campo telfono admite numeros y espacios en blanco.");
+	telefono.focus();
+	verificar=false;
+	return false;
+	}
+	else if(!comentario.value){
+	alert("el campo comentarios es requerido");
+	comentario.focus();
+	verificar=false;
+	return false;
+	}
+	else if(comentario.value.length > 200){
+	alert("El campo comentarios no puede tener mas de 200 caracteres.");
+	comentario.focus();
+	verificar=false;
+	return false;
+	}
+	
+	if(verificar==true){
+	document.formulario.submit();
+	}
+}
+function limpiarFormulario(){
+	document.getElementById("formulario").reset();
+}
+function calcular(){
+	var contadorChar= document.getElementById("contador-char").innerHTML=200 -document.formulario.comentario.value.length;
+}
+window.onload=function(){
+	var botonLimpiar=document.getElementById("limpiar");
+	botonLimpiar.onclick=limpiarFormulario;
+	var botonEnviar=document.getElementById("enviar");
+	botonEnviar.onclick=validarFormulario;
+}
+
+	</script>
+</head>
+<body>
+	<h2>.</h2>
+	<h1>.</h1>
+	<section id="contenedor">
+		<form action="homoerectus.html" method="post" id="formulario" name="formulario">
+			<fieldset>
+		    <legend>Formulario de contacto:</legend>
+				<label for="nombres">Nombres y Apellidos:</label><br/>
+				<input type="text"  name="nombres" id="nombres"/><br/>
+				
+		
+				<label for="correo">Correo:</label><br/>
+				<input type="text"  name="correo" id="correo"/><br/>
+				
+		
+				<label for="telefono">Telefono:</label><br/>
+				<input type="text"  name="telefono" id="telefono"/><br/>
+			</fieldset>
+				<br/>
+				<label for="comentario">Escribe tu comentario:</label><br/>
+				<textarea name="comentario" id="comentario" cols="70" rows="10" maxlength="200" onkeypress="calcular()" onkeyup="calcular()"></textarea><br/>
+				<p>Le quedan <span id="contador-char">200</span> de 200 caracteres.</p>
+				<br/>
+				<br />
+				<button type="button" name="enviar" id="enviar" class="canbio">Enviar</button>&nbsp;&nbsp;&nbsp;<button type="button" id="limpiar" name="limpiar" class="canbio">Limpiar Formulario</button>
+		</form>
+	</section>
+	<footer>
+	&copy; Luz Buitrago
+	<p>Correo electronico: luz.buitrago@uniminuto.edu.co</p>
+	&copy; Daniel Huertas
+	<p>Correo electronico: daniel.huertas@uniminuto.edu.co</p>
+	&copy; Camilo Rincon
+	<p>Correo electronico: juan.rincon@uniminuto.edu.co</p>
+	&copy; Camilo Riveros
+	<p>Correo electronico: camilo.riveros@uniminuto.edu.co</p>
+	
+	</footer>
+	
+</body>
+</html>

@@ -1,0 +1,131 @@
+*
+{
+    margin: 0;
+    padding: 0; 
+}
+
+header 
+{
+    
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+}
+header
+{
+    color:black;
+}
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+}
+.main-nav li
+{
+  display: inline-block;
+}
+.main-nav li a
+{
+   color: rgb(245, 239, 239);
+   text-decoration: none;
+   padding: 5px 20px;
+   font-family: "Roboto",sans-serif;
+   font-size: 15px;
+   position: relative; 
+   
+}
+
+.main-nav li.active a
+{
+ border: 1px solid white;
+}
+.main-nav li a:hover
+{
+ border: 1px solid white;
+}
+
+
+
+body
+{
+    background:url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/green-circuit-board-technology-animated-background-video-graphic-design-ultra-hd-4k-3840x2160_bku-kw-he_thumbnail-full01.png);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family:'Times New Roman', sans-serif; 
+}
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .box
+{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background:#70F36A; 
+    box-shadow: 0 5px 15px rgba(0, 0,0,.1); 
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    
+   
+
+}
+.container .box .icon
+{
+    position: relative;
+    width: 80px; 
+    height: 80px;
+    color: #fff; 
+    background: #0C7E07; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%; 
+    font-size: 40px; 
+    font-weight: 700; 
+    transition: 1s; 
+}
+.container .box:nth-child(1) .icon 
+{
+    box-shadow: 0 0 0 0 #0C7E07;
+    background: #0C7E07#0C7E07 
+}
+.container .box:nth-child(1):hover .icon
+{
+    box-shadow: 0 0 0 400px #0C7E07;
+}
+.container .box:nth-child(2).icon 
+{
+    box-shadow: 0 0 0 0 #0C7E07;
+    background:#0C7E07; 
+}
+.container .box:nth-child(2):hover .icon
+{
+    box-shadow: 0 0 0 400px #0C7E07;
+}
+.container .box:nth-child(3) .icon 
+{
+    box-shadow: 0 0 0 0 #0C7E07;
+    background: #0C7E07; 
+}
+.container .box:nth-child(3):hover .icon
+{
+    box-shadow: 0 0 0 400px #0C7E07;
+}
+
+
+
+
